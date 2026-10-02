@@ -3,7 +3,7 @@
    ========================= */
 
 body {
-  background: #16192b !important;
+  background: #1b2039 !important;
   color: #e5edf7 !important;
   font-family: 'Roboto', sans-serif;
 }
@@ -21,7 +21,7 @@ a {
 }
 
 .bg-primary {
-  background: linear-gradient(135deg, #16192b 0%, #1d2334 45%, #1a2230 100%) !important;
+  background: linear-gradient(135deg, #1b2039 0%, #232941 45%, #212840 100%) !important;
 }
 
 .text-primary {
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-  background: rgba(22, 25, 43, 0.82) !important;
+  background: rgba(27, 32, 57, 0.82) !important;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(20, 27, 42, 0.85);
+  background: rgba(27, 32, 57, 0.85);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   height: 100%;
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .work img {
   width: 100%;
-  height: 240px;
+  height: 280px;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -152,13 +152,14 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   background: linear-gradient(180deg, rgba(22, 25, 43, 0.45), rgba(11, 206, 175, 0.93));
   color: #fff;
-  padding: 1.5rem;
+  padding: 1.15rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0.35rem;
   opacity: 0;
   transition: opacity 0.28s ease;
-  min-height: 100%;
+  overflow: hidden;
 }
 
 .work:hover .layer {
@@ -166,17 +167,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .work .layer h3 {
-  margin: 0 0 0.8rem 0;
-  font-size: 1.3rem;
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.25;
   color: #ffffff;
 }
 
 .work .layer p {
-  margin: 0 0 1rem 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
   color: rgba(255, 255, 255, 0.95);
-  flex-grow: 1;
+  flex: 0 1 auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .work .layer .project-links {
@@ -185,43 +191,52 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.8rem;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  margin-top: 0.2rem;
+  margin-top: 0.45rem;
 }
 
-.work .layer a {
+.work .layer .project-links a {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0;
+  line-height: 1;
+  border-radius: 50%;
+  flex: 0 0 auto;
   color: #fff;
   font-size: 1.1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
-  flex-shrink: 0;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .work .layer a:hover {
   transform: translateY(-2px);
 }
 
+.work .layer .project-links a:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 #skill {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-  background: #16192b !important;
+  background: #1b2039 !important;
 }
 
 .skill-box {
-  background: rgba(20, 27, 42, 0.6) !important;
-  border: none !important;
+  background: rgba(255, 248, 243, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
   border-radius: 12px;
   padding: 1.2rem 0.8rem !important;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: none !important;
+  box-shadow: 0 4px 14px rgba(90, 60, 45, 0.12) !important;
 }
 
 .skill-box:hover {
   transform: translateY(-6px);
-  background: rgba(20, 27, 42, 0.9) !important;
-  box-shadow: 0 8px 20px rgba(11, 206, 175, 0.15) !important;
+  background: rgba(255, 253, 250, 0.82) !important;
+  box-shadow: 0 8px 20px rgba(90, 60, 45, 0.22) !important;
 }
 
 .skill-title {
@@ -249,7 +264,7 @@ h1, h2, h3, h4, h5, h6 {
 .skill-title h3 {
   font-size: 0.95rem;
   margin: 0;
-  color: #dde5f2;
+  color: #4b3a33;
   font-weight: 500;
 }
 
@@ -259,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about .container {
-  background: rgba(20, 27, 42, 0.62);
+  background: rgba(27, 32, 57, 0.62);
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 22px;
   padding: 2.2rem;
@@ -301,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: rgba(20, 27, 42, 1);
+  background: rgba(27, 32, 57, 1);
   border: 1px solid rgba(255,255,255,0.08);
   color: #fff !important;
   display: flex;
