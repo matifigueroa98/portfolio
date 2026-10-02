@@ -3,7 +3,7 @@
    ========================= */
 
 body {
-  background: #0f1419 !important;
+  background: #16192b !important;
   color: #e5edf7 !important;
   font-family: 'Roboto', sans-serif;
 }
@@ -21,7 +21,7 @@ a {
 }
 
 .bg-primary {
-  background: linear-gradient(135deg, #0f1419 0%, #141b2a 45%, #0f1924 100%) !important;
+  background: linear-gradient(135deg, #16192b 0%, #1d2334 45%, #1a2230 100%) !important;
 }
 
 .text-primary {
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-  background: rgba(15, 20, 25, 0.82) !important;
+  background: rgba(22, 25, 43, 0.82) !important;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 .work .layer {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 20, 25, 0.5), rgba(11, 206, 175, 0.95));
+  background: linear-gradient(180deg, rgba(22, 25, 43, 0.45), rgba(11, 206, 175, 0.93));
   color: #fff;
   padding: 1.5rem;
   display: flex;
@@ -179,30 +179,33 @@ h1, h2, h3, h4, h5, h6 {
   flex-grow: 1;
 }
 
+.work .layer .project-links {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-top: 0.2rem;
+}
+
 .work .layer a {
   color: #fff;
   font-size: 1.1rem;
-  margin-right: 0.8rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease;
+  flex-shrink: 0;
 }
 
 .work .layer a:hover {
   transform: translateY(-2px);
 }
 
-.work .layer > div {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
 #skill {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-  background: #0f1419 !important;
+  background: #16192b !important;
 }
 
 .skill-box {
