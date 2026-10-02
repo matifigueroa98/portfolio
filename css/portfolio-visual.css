@@ -3,7 +3,7 @@
    ========================= */
 
 body {
-  background: #0a0f1e !important;
+  background: #0f1419 !important;
   color: #e5edf7 !important;
   font-family: 'Roboto', sans-serif;
 }
@@ -21,7 +21,7 @@ a {
 }
 
 .bg-primary {
-  background: linear-gradient(135deg, #0b1020 0%, #111827 45%, #101a2a 100%) !important;
+  background: linear-gradient(135deg, #0f1419 0%, #141b2a 45%, #0f1924 100%) !important;
 }
 
 .text-primary {
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-  background: rgba(15, 23, 42, 0.82) !important;
+  background: rgba(15, 20, 25, 0.82) !important;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(20, 27, 42, 0.85);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   height: 100%;
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 .work .layer {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(11, 18, 32, 0.5), rgba(11, 206, 175, 0.95));
+  background: linear-gradient(180deg, rgba(15, 20, 25, 0.5), rgba(11, 206, 175, 0.95));
   color: #fff;
   padding: 1.5rem;
   display: flex;
@@ -183,7 +183,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-size: 1.1rem;
   margin-right: 0.8rem;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.2s ease;
 }
 
@@ -191,14 +193,20 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
+.work .layer > div {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
 #skill {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-  background: #0a0f1e !important;
+  background: #0f1419 !important;
 }
 
 .skill-box {
-  background: rgba(15, 23, 42, 0.6) !important;
+  background: rgba(20, 27, 42, 0.6) !important;
   border: none !important;
   border-radius: 12px;
   padding: 1.2rem 0.8rem !important;
@@ -209,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-box:hover {
   transform: translateY(-6px);
-  background: rgba(15, 23, 42, 0.9) !important;
+  background: rgba(20, 27, 42, 0.9) !important;
   box-shadow: 0 8px 20px rgba(11, 206, 175, 0.15) !important;
 }
 
@@ -248,7 +256,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about .container {
-  background: rgba(15, 23, 42, 0.62);
+  background: rgba(20, 27, 42, 0.62);
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 22px;
   padding: 2.2rem;
@@ -290,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: rgba(15, 23, 42, 1);
+  background: rgba(20, 27, 42, 1);
   border: 1px solid rgba(255,255,255,0.08);
   color: #fff !important;
   display: flex;
