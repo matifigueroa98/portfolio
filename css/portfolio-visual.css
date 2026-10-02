@@ -127,6 +127,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(15, 23, 42, 0.85);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
 }
 
 .work:hover {
@@ -149,14 +150,15 @@ h1, h2, h3, h4, h5, h6 {
 .work .layer {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(11, 18, 32, 0.35), rgba(11, 206, 175, 0.9));
+  background: linear-gradient(180deg, rgba(11, 18, 32, 0.5), rgba(11, 206, 175, 0.95));
   color: #fff;
-  padding: 1.25rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-between;
   opacity: 0;
   transition: opacity 0.28s ease;
+  min-height: 100%;
 }
 
 .work:hover .layer {
@@ -164,22 +166,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .work .layer h3 {
-  margin-bottom: 0.6rem;
-  font-size: 1.4rem;
+  margin: 0 0 0.8rem 0;
+  font-size: 1.3rem;
   color: #ffffff;
 }
 
 .work .layer p {
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  flex-grow: 1;
 }
 
 .work .layer a {
   color: #fff;
-  font-size: 1.2rem;
-  margin-right: 0.7rem;
+  font-size: 1.1rem;
+  margin-right: 0.8rem;
   display: inline-block;
   transition: transform 0.2s ease;
 }
@@ -191,29 +194,23 @@ h1, h2, h3, h4, h5, h6 {
 #skill {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-}
-
-.container5 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 1rem;
-  margin-top: 2.5rem;
+  background: #0a0f1e !important;
 }
 
 .skill-box {
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 1rem 0.8rem;
+  background: rgba(15, 23, 42, 0.6) !important;
+  border: none !important;
+  border-radius: 12px;
+  padding: 1.2rem 0.8rem !important;
   text-align: center;
-  transition: all 0.25s ease;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  transition: all 0.3s ease;
+  box-shadow: none !important;
 }
 
 .skill-box:hover {
-  transform: translateY(-4px);
-  border-color: rgba(11, 206, 175, 0.7);
-  box-shadow: 0 12px 26px rgba(11, 206, 175, 0.16);
+  transform: translateY(-6px);
+  background: rgba(15, 23, 42, 0.9) !important;
+  box-shadow: 0 8px 20px rgba(11, 206, 175, 0.15) !important;
 }
 
 .skill-title {
@@ -229,13 +226,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 54px;
   height: 54px;
   object-fit: contain;
-  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.18));
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover .skill-icon,
+.skill-box:hover .skill-icons {
+  transform: scale(1.08);
 }
 
 .skill-title h3 {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin: 0;
-  color: #edf4ff;
+  color: #dde5f2;
+  font-weight: 500;
 }
 
 #about {
@@ -277,6 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 .social-icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -306,6 +311,29 @@ h1, h2, h3, h4, h5, h6 {
   background: #0bceaf !important;
   border-color: #0bceaf !important;
   color: #08141b !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 50px !important;
+  height: 50px !important;
+  padding: 0 !important;
+}
+
+.back-to-top:hover {
+  background: #09a894 !important;
+}
+
+.scroll-to-bottom {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: #fff;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(10px); }
 }
 
 @media (max-width: 991px) {
@@ -325,17 +353,9 @@ h1, h2, h3, h4, h5, h6 {
   .work-list {
     grid-template-columns: 1fr;
   }
-
-  .container5 {
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
-  }
 }
 
 @media (max-width: 576px) {
-  .container5 {
-    grid-template-columns: 1fr;
-  }
-
   .btn {
     width: 100%;
     margin-bottom: 0.75rem;
@@ -347,5 +367,12 @@ h1, h2, h3, h4, h5, h6 {
 
   #about .container {
     padding: 1.2rem;
+  }
+
+  .back-to-top {
+    width: 45px !important;
+    height: 45px !important;
+    bottom: 20px !important;
+    right: 20px !important;
   }
 }
